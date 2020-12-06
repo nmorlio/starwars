@@ -1,0 +1,68 @@
+PROYECTO STAR WARS
+
+local host->ir a public para encontrar menu
+
+Decidi armar un diseno de proyecto sencillo para poder realizarlo en pocas horas. Otra opcion que crei posible para este caso es MVC.
+Lo diagrame en 3 carpetas.
+	1.CONFIG->donde estan configuradas las rutas en relacion a los ficheros y base de datos
+	2.CSV->carpeta de recursos donde estara el fichero CSV que luego sera utilizado para crear la base de datos
+	3.PUBLIC->en la misma se encuentra:
+		->index, con los links a los distintos enlaces
+		-> los ficheros con los scripts para 
+			.crear la base de datos: 
+			.eliminarla:
+				
+			->una carpeta /naves donde se encuentran los distintos scripts para las funcionalidades -agregar, -eliminar, -mostrar y -ver todas las naves.
+			 Plantee esto como si fuera un CRUD.
+			 En el mismo fichero de cada funcionalidad se encuentra debajo el fragmento HTML donde aparece los botones o enlaces.
+		
+	
+
+Base de datos-> gestion de errores (bloque try catch)
+		->nos conectamos a la base de datos/ utilizo libreria PDO que viene incluida en php
+		->establecemos los parametros para luego crear la tabla (se ha agregado ID incremental)
+		->sql->insertar datos en tabla/definimos cuales seran los values 
+		->bindparam, metodo para enlazar los valores 
+		->funciones de manejo de ficheros, para manipular los valores del CSV y construir un array con los valores de cada linea.
+		->ejecutamos
+		
+		->eliminar base de datos-> $ulk = @unlink($CONFIG['db'])// borra fichero que creamos de la base de datos
+CRUD->naves
+
+Front
+	.utilice las clases de bootstrap para darle diseno UI al proyecto.
+	.simplemente arme un sistema donde aparece una alineacion de botones verticales y luego en cada div=row inserte los distintos elementos.
+	.intente utilizar colores que vayan con el tema, sin hacerlo muy complejo.
+	.el mismo es responsive al utilizar bootstrap e importar la propiedad. 		
+		
+		
+
+Cuestiones a tener en cuenta para mejora el proyecto
+	
+	.validacion de campos a nivel navegador con JS
+	.Public-> organizar los ficheros para tener por separado las vistas y usar plantillas con boostrap para no repetir codigo.
+	.se podrian hacer pruebas de unit test previas con TDD
+	
+
+PROYECTO PICSUM
+
+ config, configurar las rutas
+ 	donde se guardara el fichero CSV
+ 	la direccion de la ruta
+ 
+ pubic 
+ 	index->enlace a los scripts, ejecuta los scripts
+ 	cargar archivos->
+ 	leer archivos
+ 	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
